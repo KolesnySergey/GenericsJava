@@ -1,5 +1,5 @@
 /**
- * Генерики в Java
+ * Р“РµРЅРµСЂРёРєРё РІ Java
  */
 
 import java.util.Random;
@@ -10,7 +10,7 @@ public class MyOperation
 	public static void main(String[] args) throws OperationNotSupportedException 
 	{
 		MyString myStr = new MyString();
-		System.out.println(myStr.add("миро", "творец"));
+		System.out.println(myStr.add("РјРёСЂРѕ", "С‚РІРѕСЂРµС†"));
 		
 		Vector vectorA = new Vector();
 		Vector vectorB = new Vector();
@@ -29,35 +29,36 @@ public class MyOperation
 }
 
 /**
- * Интерфейс, описывающий доступные операции
+ * РРЅС‚РµСЂС„РµР№СЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РґРѕСЃС‚СѓРїРЅС‹Рµ РѕРїРµСЂР°С†РёРё
 **/
 interface Operations<T>
 {
-	/**Метод для сложения двух объектов типа T*/
+	/**РњРµС‚РѕРґ РґР»СЏ СЃР»РѕР¶РµРЅРёСЏ РґРІСѓС… РѕР±СЉРµРєС‚РѕРІ С‚РёРїР° T*/
 	public T add(T digitA, T digitB);
 	/**
-	 * Метод для деления двух объектов типа T
-	 * @throws OperationNotSupportedException выдается, если операция недоступна
+	 * РњРµС‚РѕРґ РґР»СЏ РґРµР»РµРЅРёСЏ РґРІСѓС… РѕР±СЉРµРєС‚РѕРІ С‚РёРїР° T
+	 * @throws OperationNotSupportedException РІС‹РґР°РµС‚СЃСЏ, РµСЃР»Рё РѕРїРµСЂР°С†РёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР°
 	 * */
 	public T divide(T digitA, T digitB) throws OperationNotSupportedException;
 	/**
-	 * Метод для умножения двух объектов типа T
-	 * @throws OperationNotSupportedException выдается, если операция недоступна
+	 * РњРµС‚РѕРґ РґР»СЏ СѓРјРЅРѕР¶РµРЅРёСЏ РґРІСѓС… РѕР±СЉРµРєС‚РѕРІ С‚РёРїР° T
+	 * @throws OperationNotSupportedException РІС‹РґР°РµС‚СЃСЏ, РµСЃР»Рё РѕРїРµСЂР°С†РёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР°
 	 * */
 	public T multiple(T digitA, T digitB) throws OperationNotSupportedException;
-	/**Метод для вычитания двух объектов типа T*/
+	/**РњРµС‚РѕРґ РґР»СЏ РІС‹С‡РёС‚Р°РЅРёСЏ РґРІСѓС… РѕР±СЉРµРєС‚РѕРІ С‚РёРїР° T*/
 	public T sub(T digitA, T digitB);
 } 
 
-/**Класс, содержащий вектор размерностью 2х2 
- * и заполняющий его случайными числами 
- * при создании экземпляра класса
+
+/**РљР»Р°СЃСЃ, СЃРѕРґРµСЂР¶Р°С‰РёР№ РІРµРєС‚РѕСЂ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊСЋ 2С…2 
+ * Рё Р·Р°РїРѕР»РЅСЏСЋС‰РёР№ РµРіРѕ СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё 
+ * РїСЂРё СЃРѕР·РґР°РЅРёРё СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР°
  * */
 class Vector 
 {
-	/**Вектор, размерностью 2х2*/
+	/**Р’РµРєС‚РѕСЂ, СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊСЋ 2С…2*/
 	public int vector[][] = new int[2][2];
-	/**Рандомизатор, для заполнения вектора случайными числами*/
+	/**Р Р°РЅРґРѕРјРёР·Р°С‚РѕСЂ, РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РІРµРєС‚РѕСЂР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё*/
 	Random rnd = new Random();
 	
 	public Vector()
@@ -72,7 +73,7 @@ class Vector
 	}
 	
 	/**
-	 * Метод для вывода вектора на экран
+	 * РњРµС‚РѕРґ РґР»СЏ РІС‹РІРѕРґР° РІРµРєС‚РѕСЂР° РЅР° СЌРєСЂР°РЅ
 	 * */
 	public void printVector()
 	{
@@ -91,10 +92,10 @@ class Vector
 class MyVector implements Operations<Vector>
 {
 	/**
-	 * Метод сложения 2х векторов
-	 * @param digitA вектор №1
-	 * @param digitB вектор №2
-	 * @return экземпляр класса Vector
+	 * РњРµС‚РѕРґ СЃР»РѕР¶РµРЅРёСЏ 2С… РІРµРєС‚РѕСЂРѕРІ
+	 * @param digitA РІРµРєС‚РѕСЂ в„–1
+	 * @param digitB РІРµРєС‚РѕСЂ в„–2
+	 * @return СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° Vector
 	 * */
 	@Override
 	public Vector add(Vector digitA, Vector digitB)
@@ -109,8 +110,8 @@ class MyVector implements Operations<Vector>
 	}
 
 	/**
-	 * Метод деления 2х векторов
-	 * @throws OperationNotSupportedException выдается, если операция недоступна
+	 * РњРµС‚РѕРґ РґРµР»РµРЅРёСЏ 2С… РІРµРєС‚РѕСЂРѕРІ
+	 * @throws OperationNotSupportedException РІС‹РґР°РµС‚СЃСЏ, РµСЃР»Рё РѕРїРµСЂР°С†РёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР°
 	 * */
 	@Override
 	public Vector divide(Vector digitA, Vector digitB)
@@ -120,8 +121,8 @@ class MyVector implements Operations<Vector>
 	}
 
 	/**
-	 * Метод умножения 2х векторов
-	 * @throws OperationNotSupportedException выдается, если операция недоступна
+	 * РњРµС‚РѕРґ СѓРјРЅРѕР¶РµРЅРёСЏ 2С… РІРµРєС‚РѕСЂРѕРІ
+	 * @throws OperationNotSupportedException РІС‹РґР°РµС‚СЃСЏ, РµСЃР»Рё РѕРїРµСЂР°С†РёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР°
 	 * */
 	@Override
 	public Vector multiple(Vector digitA, Vector digitB)
@@ -131,10 +132,10 @@ class MyVector implements Operations<Vector>
 	}
 	
 	/**
-	 * Метод нахождения разности 2х векторов.
-	 * @param digitA вектор №1
-	 * @param digitB вектор №2
-	 * @return экземпляр класса Vector
+	 * РњРµС‚РѕРґ РЅР°С…РѕР¶РґРµРЅРёСЏ СЂР°Р·РЅРѕСЃС‚Рё 2С… РІРµРєС‚РѕСЂРѕРІ.
+	 * @param digitA РІРµРєС‚РѕСЂ в„–1
+	 * @param digitB РІРµРєС‚РѕСЂ в„–2
+	 * @return СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° Vector
 	 * */
 	@Override
 	public Vector sub(Vector digitA, Vector digitB)
